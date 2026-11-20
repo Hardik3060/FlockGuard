@@ -1,0 +1,131 @@
+# ----------------------------------------------------------------------
+# Core React Native .gitignore - Updated for Safety
+# ----------------------------------------------------------------------
+
+# macOS
+.DS_Store
+
+# ----------------------------------------------------------------------
+# Environment/Secrets (CRITICAL: Do not commit these)
+# ----------------------------------------------------------------------
+.env
+.env.*
+.env.local
+**/.env.local
+
+# Sensitive keys & credentials
+*.p12
+*.pem
+*.key
+*.cer
+*.crt
+*.jks
+*.keystore
+google-services.json
+GoogleService-Info.plist
+*.mobileprovision
+*.provisionprofile
+secrets.*
+credentials.*
+
+# ----------------------------------------------------------------------
+# Node / JS Tooling & Cache
+# ----------------------------------------------------------------------
+node_modules/
+# package-lock.json is generally committed for reproducible builds, 
+# but uncomment the next line if you are using yarn/pnpm exclusively
+# package-lock.json 
+npm-debug.log
+yarn-error.log
+.pnpm-store/
+.eslintcache
+.watchmanconfig
+.cache/
+
+# ----------------------------------------------------------------------
+# Xcode / iOS (KEEP the main ios/ folder, IGNORE only the generated files)
+# ----------------------------------------------------------------------
+# Removed the dangerous 'ios/' line.
+
+DerivedData/
+*.hmap
+*.ipa
+*.xcuserstate
+**/.xcode.env.local
+
+# Project build & settings files
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+*.xccheckout
+*.moved-aside
+*.xcodeproj/project.xcworkspace/xcuserdata
+
+# Ruby / Bundler / CocoaPods
+.bundle/
+vendor/bundle/
+# Gemfile.lock is often committed, but excluded here for safety
+Gemfile.lock 
+**/Pods/
+Podfile.lock
+
+# ----------------------------------------------------------------------
+# Android / IntelliJ (KEEP the main android/ folder, IGNORE only the generated files)
+# ----------------------------------------------------------------------
+# Removed the dangerous 'android/' line.
+
+# Build/Cache
+build/
+.gradle/
+.idea/
+.cxx/
+local.properties
+*.apk
+*.iml
+*.hprof
+
+# Keystores (already covered in Sensitive keys, but good to double-list)
+*.keystore
+*.jks
+debug.keystore
+
+# ----------------------------------------------------------------------
+# Expo / Metro / Bundles
+# ----------------------------------------------------------------------
+.expo/
+.expo-shared/
+.metro-health-check*
+*.jsbundle
+.bundle/
+
+# ----------------------------------------------------------------------
+# Testing & CI
+# ----------------------------------------------------------------------
+__tests__/
+__test__/
+coverage/
+.nyc_output/
+
+# Fastlane
+**/fastlane/report.xml
+**/fastlane/Preview.html
+**/fastlane/screenshots
+**/fastlane/test_output
+fastlane/credentials.json
+
+# IDEs / Editors
+.vscode/
+# *.iml is covered under Android/IntelliJ, but repeated here for safety
+*.iml
+
+# Misc
+*.log
+*.tmp
+*.bak
